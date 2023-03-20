@@ -17,5 +17,5 @@ async def catalog(request: Request):
     return templates.TemplateResponse("catalog.html", {"request": request, "title": "My Shop Catalog", "current_year": 2023})
 
 @app.get("/products", response_class=HTMLResponse)
-async def catalog(request: Request):
+async def products(request: Request):
     return templates.TemplateResponse("products.html", {"request": request, "title": "My Products", "current_year": 2023})

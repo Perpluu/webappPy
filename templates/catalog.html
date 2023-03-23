@@ -15,73 +15,13 @@
             </nav>
         </header>
         <main>
-            {% block content %}
-            <h1>Here is the list of products!</h1>
-            <br>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 1</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 2</h2>
-                <h7>19.99$</h7>
-                </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 3</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 4</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 5</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 6</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 7</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 8</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            <main class="product">
-                <a href="{{ url_for('products') }}">
-                <img src="{{ url_for('static', path='/pic1.jpg') }}">
-                <h2>Product 9</h2>
-                <h7>19.99$</h7>
-            </a>
-            </main>
-            {% endblock %}
+            <ul>
+                {% for headphones in products %}
+                <h1>{{ headphones.name }}</h1>
+                <p>{{ headphones.price }}</p>
+                <img class="logo" src="{{ url_for('static', path="/{{ headphones.image }}")}}">
+                {% endfor %}
+                </ul>
         </main>
         <footer>
             <p>&copy; {{ current_year }} My Shop Inc.</p>

@@ -22,7 +22,7 @@
                 <img src="{{ url_for('static', path='/pic1.jpg') }}" height="550px" width="600px">
             </div>
             <br>
-            <a href="#"><button class="w3-button w3-black w3-round-small">Buy Here</button></a>
+            <a href="{{ url_for('cart')}}"><button class="w3-button w3-black w3-round-small">Buy Here</button></a>
             <h3>19.99$</h3>
             {% endblock %}
         </main>

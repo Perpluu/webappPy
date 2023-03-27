@@ -28,6 +28,23 @@ main {
     padding: 20px;
     text-align: center;
 }
+
+main[data-list]{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 115px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill,500px);
+}
+main[data-list] a:link{
+    text-decoration: none;
+    color: black;
+}
+main[data-list] a:visited{
+    text-decoration: none;
+    color: black;
+}
+
 .product { 
     padding-top: 5%;
     width: 30%;

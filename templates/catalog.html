@@ -14,18 +14,16 @@
                 <a href="{{ url_for('products') }}">Products</a>
             </nav>
         </header>
-        <main>
+        <main data-list>
                 {% for headphones in products %}
-                <h1>{{ headphones.name }}</h1>
-                <p>{{ headphones.price }}</p>
-                <img class="logo" src="{{ url_for('static', path='pic1.jpg' ) }}" width="150px" height="150px">
+                <a href="{{ url_for('products')}}">
+                <div data-product>
+                    <h1>{{ headphones.name }}</h1>
+                    <p>{{ headphones.price }}</p>
+                    <img class="logo" src="{{ url_for('static', path='pic1.jpg' ) }}" width="150px" height="150px">
+                </div>
+                </a>
                 {% endfor %}
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
         </main>
         <footer>
             <p>&copy; {{ current_year }} My Shop Inc.</p>

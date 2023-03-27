@@ -8,10 +8,15 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 headphones = [
-    {"name": "Product 1", "price": 10.99, "image": "pic1.jpg"},
-    {"name": "Product 2", "price": 5.99, "image": "pic1.jpg"},
-    {"name": "Product 3", "price": 15.99, "image": "pic1.jpg"},
-    {"name": "Product 4", "price": 25.99, "image": "pic1.jpg"}
+    {"name": "Product 1", "price": "10.99 $"},
+    {"name": "Product 2", "price": "5.99 $"},
+    {"name": "Product 3", "price": "15.99 $"},
+    {"name": "Product 4", "price": "25.99 $"},
+    {"name": "Product 5", "price": "10.99 $"},
+    {"name": "Product 6", "price": "5.99 $"},
+    {"name": "Product 7", "price": "15.99 $"},
+    {"name": "Product 8", "price": "25.99 $"},
+    {"name": "Product 8", "price": "30.99 $"}
 ]
 
 @app.get("/", response_class=HTMLResponse)
